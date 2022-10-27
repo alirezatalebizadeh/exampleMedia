@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Media {
+    width: 50%;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.icon-box {
+    width: 110px;
+    height: 110px;
+    background-color: #FFF;
+    border-radius: 50%;
+    box-shadow: 2px 5px 4px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #3ee60b;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #3ee60b;
+    top: -100px;
+    right: -80px;
+}
+
+.icon-box:hover::before {
+    animation: MoveToBottom 1s forwards;
+}
+
+.icon-box .fa {
+    line-height: 110px;
+    font-size: 40px;
+    transition: all 0.5s;
+}
+
+.icon-box:hover .fa {
+    color: #FFF;
+    transform: scale(1.1);
+}
+
+@keyframes MoveToBottom {
+    0% {
+        top: -100px;
+        right: -80px;
+    }
+
+    70% {
+        top: 20px;
+        right: 20px;
+    }
+
+    100% {
+        top: 0;
+        right: 0;
+    }
+}
+
+/* ---------------------------------media2 ---------------------*/
+
+.Media2 {
+    width: 80%;
+    height: 60px;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.icon-box2 {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-box2 .fa {
+    color: #FFF;
+    font-size: 30px;
+    line-height: 50px;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.icon-box2:hover .fa {
+    transform: scale(1.1);
+}
+
+.icon-box2::before,
+.icon-box2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    transition: all 0.6s;
+
+}
+
+/*instagram*/
+
+.instagram::after {
+    box-shadow: 0px 0px 5px 0px #e716d6 inset;
+}
+
+.instagram::before {
+    box-shadow: 0px 0px 0px 30px #c4077b inset;
+    transform: translateX(50px);
+}
+
+.instagram:hover::before {
+    transform: translateX(0px);
+}
+
+/*google*/
+
+.google::after {
+    box-shadow: 0px 0px 5px 0px #ebb608 inset;
+
+}
+
+.google::before {
+    box-shadow: 0px 0px 0px 0px #ebb608 inset, 0px 0px 0px 0px #ebb608 inset;
+    border-radius: 0;
+}
+
+.google:hover::before {
+    box-shadow: 0px 30px 0px 0px #ebb608 inset, 0px -30px 0px 0px #ebb608 inset;
+
+}
+
+
+/*whatsapp*/
+
+.whatsapp::before {
+    box-shadow: 0px 0px 5px 0px #00ee20 inset;
+}
+
+.whatsapp:hover:before {
+    box-shadow: 0px 0px 5px 30px #00ee20 inset;
+
+}
+
+/*twitter*/
+
+.twitter::after {
+    box-shadow: 0px 0px 5px 0px #0cb9ee inset;
+}
+
+.twitter::before {
+    background-color: #0cb9ee;
+    box-shadow: 0px 0px 0px 30px #000 inset;
+}
+
+.twitter:hover::before {
+    box-shadow: 0px 0px 0px 1px #000 inset;
+}
+
+/* -------------------------------media3------------------------------- */
+
+.Media3 .fa {
+    width: 45px;
+    height: 45px;
+    background-color: rgb(0, 115, 255);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 150px;
+    left: 80px;
+}
+
+#share {
+    width: 55px;
+    height: 55px;
+    font-size: 40px;
+    line-height: 55px;
+    z-index: 999;
+}
+
+#telegram,
+#instagram,
+#youtube,
+#facebook {
+    top: 155px;
+    left: 85px;
+}
+
+
+#telegram {
+    animation: TelegramOut 0.5s forwards;
+}
+
+#share:hover~#telegram {
+    animation: Telegram 0.5s forwards;
+}
+
+#instagram {
+    animation: InstagramOut 0.5s forwards;
+}
+
+#share:hover~#instagram {
+    animation: Instagram 0.5s forwards;
+    animation-delay: 0.3s;
+}
+
+#facebook {
+    animation: FacebookOut 0.5s forwards;
+}
+
+#share:hover~#facebook {
+    animation: Facebook 0.5s forwards;
+    animation-delay: 0.6s;
+}
+
+#youtube {
+    animation: YoutubeOut 0.5s forwards;
+}
+
+#share:hover~#youtube {
+    animation: Youtube 0.5s forwards;
+    animation-delay: 0.9s;
+}
+
+@keyframes Telegram {
+    0% {
+        top: 155px;
+        left: 85px;
+    }
+
+    100% {
+        top: 60px;
+        left: 120px;
+    }
+}
+
+@keyframes TelegramOut {
+    100% {
+        top: 155px;
+        left: 85px;
+    }
+
+    0% {
+        top: 60px;
+        left: 120px;
+    }
+}
+
+@keyframes Instagram {
+    0% {
+        top: 155px;
+        left: 85px;
+    }
+
+    100% {
+        top: 120px;
+        left: 160px;
+    }
+}
+
+@keyframes InstagramOut {
+    100% {
+        top: 155px;
+        left: 85px;
+    }
+
+    0% {
+        top: 120px;
+        left: 160px;
+    }
+}
+
+@keyframes Facebook {
+    0% {
+        top: 155px;
+        left: 85px;
+    }
+
+    100% {
+        top: 190px;
+        left: 160px;
+    }
+}
+
+@keyframes FacebookOut {
+    100% {
+        top: 155px;
+        left: 85px;
+    }
+
+    0% {
+        top: 190px;
+        left: 160px;
+    }
+}
+
+@keyframes Youtube {
+    0% {
+        top: 155px;
+        left: 85px;
+    }
+
+    100% {
+        top: 240px;
+        left: 120px;
+    }
+}
+
+@keyframes YoutubeOut {
+    100% {
+        top: 155px;
+        left: 85px;
+    }
+
+    0% {
+        top: 240px;
+        left: 120px;
+    }
+}
